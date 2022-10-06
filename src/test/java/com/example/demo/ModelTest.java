@@ -2,7 +2,7 @@ package com.example.demo;
 
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -33,10 +33,10 @@ public class ModelTest {
 
 	@Test
 	public void isModelTest() throws Exception {
-	// modelにセットされているかのテスト
-	when(shainService.findByNo("100")).thenReturn("佐藤");
-	mockMvc.perform(post("/output?number=100"))
-	.andExpect(model().attribute("name", "佐藤"));
+		// modelにセットされているかのテスト
+		when(shainService.findByNo("100")).thenReturn("佐藤");
+		mockMvc.perform(post("/output?number=100"))
+				.andExpect(model().attribute("name", "佐藤"));
 	}
 
 }
