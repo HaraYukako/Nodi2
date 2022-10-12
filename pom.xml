@@ -81,7 +81,7 @@
 		<log4j.version>2.3</log4j.version>
 		 <!-- 追加始めり参考書-->
 		<!-- JaCoCo Properties -->
-		<jacoco-maven.version>0.8.1</jacoco-maven.version>
+		<jacoco-maven.version>0.7.9</jacoco-maven.version>
 		<jacoco.include.package>**/*</jacoco.include.package>
 		</properties>
 		<!-- 追加始めり参考書-->
@@ -115,7 +115,7 @@
 		        <version>${jacoco-maven.version}</version>
 		        <executions>
 		        	<execution>
-		        		<id>default-prepare-agent</id>
+		        		<id>prepare-agent</id>
 		        		<goals>
 		        			<goal>prepare-agent</goal>
 		        		</goals>
