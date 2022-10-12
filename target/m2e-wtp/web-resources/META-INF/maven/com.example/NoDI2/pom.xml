@@ -42,14 +42,14 @@
 			<!--<version>${junit.version}</version>-->
 			<scope>test</scope>
 		</dependency>
-		<!-- 追加始めり
+		<!-- 追加始めり-->
 		<dependency>
 		<groupId>org.junit.platform</groupId>
 		<artifactId>junit-platform-runner</artifactId>
 		<version>1.2.0</version>
 		<scope>test</scope>
 		</dependency>
-		 追加終わり -->
+		 <!--追加終わり -->
 
 		<dependency>
 			<groupId>org.easymock</groupId>
@@ -79,6 +79,9 @@
 		 <Junit.version>5.2.0</Junit.version>
 		<easymock.version>3.4</easymock.version>
 		<log4j.version>2.3</log4j.version>
+		<!-- JaCoCo Properties -->
+		<jacoco-maven.version>0.7.9</jacoco-maven.version>
+		<jacoco.include.package>**/*</jacoco.include.package>
 		</properties>
 	<build>
 	<pluginManagement>
@@ -103,7 +106,21 @@
             </dependencies>
            追加終わり-->
         </plugin>
-
+        <!-- 追加始めり参考書-->
+			<plugin>
+				<groupId>org.jacoco</groupId>
+		        <artifactId>jacoco-maven-plugin</artifactId>
+		        <version>${jacoco-maven.version}</version>
+		        <executions>
+		        	<execution>
+		        		<id>default-prepare-agent</id>
+		        		<goals>
+		        			<goal>prepare-agent</goal>
+		        		</goals>
+		        	</execution>
+		        </executions>
+			</plugin>
+		<!-- 追加終わり -->
       </plugins>
       </pluginManagement>
 </build>
