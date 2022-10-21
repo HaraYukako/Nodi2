@@ -42,14 +42,14 @@
 			<!--<version>${junit.version}</version>-->
 			<scope>test</scope>
 		</dependency>
-		<!-- 追加始めり-->
+		<!-- < 追加始めり
 		<dependency>
 		<groupId>org.junit.platform</groupId>
 		<artifactId>junit-platform-runner</artifactId>
 		<version>1.2.0</version>
 		<scope>test</scope>
 		</dependency>
-		 <!--追加終わり -->
+		 追加終わり -->
 
 		<dependency>
 			<groupId>org.easymock</groupId>
@@ -75,18 +75,34 @@
 	<pluginManagement>
 		<plugins>
 			<plugin>
+				<groupId>org.jacoco</groupId>
+		        <artifactId>jacoco-maven-plugin</artifactId>
+		        <version>${jacoco-maven.version}</version>
+		        <executions>
+		        	<execution>
+		        		<id>default-prepare-agent</id>
+		        		<goals>
+		        			<goal>prepare-agent</goal>
+		        		</goals>
+		        	</execution>
+		        </executions>
+			</plugin>
+			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-		<!-- 追加始めり-->
+		</plugins>
+	</pluginManagement>
+	</build>
+		<!--  追加始めり
 		<plugin>
 		<groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.0.0-M7</version>
         </plugin>
-         <!-- 追加終わり -->
+         追加終わり -->
 
-        <!-- 追加始めり参考書-->
+        <!-- 追加始めり参考書
 			<plugin>
 				<groupId>org.jacoco</groupId>
 		        <artifactId>jacoco-maven-plugin</artifactId>
@@ -107,7 +123,7 @@
             </execution>
 		        </executions>
 			</plugin>
-		<!-- 追加終わり -->
+		 追加終わり
      	 </plugins>
       </pluginManagement>
 		</build>
@@ -118,5 +134,5 @@
 		        <artifactId>maven-surefire-report-plugin</artifactId>
 		      </plugin>
 		    </plugins>
-		  </reporting>
+		  </reporting> -->
 </project>
