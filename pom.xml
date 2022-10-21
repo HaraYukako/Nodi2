@@ -72,7 +72,6 @@
 		</properties>
 		<!-- 追加始めり参考書-->
 	<build>
-	<pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>org.jacoco</groupId>
@@ -92,7 +91,6 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-	</pluginManagement>
 	</build>
 		<!--  追加始めり
 		<plugin>
