@@ -17,7 +17,7 @@ public class GroupServiceImplTest {
 	@Test
 	public void findByGroupNoTest() throws Exception {
 		//shainRepositoryをモックにして、findByNoが機能するか？のテスト
-		when(groupRepository.selectByNo("10000")).thenReturn("SS1部");
+		when(groupRepository.selectByNo("1000")).thenReturn("SS1部");
 		GroupService groupService = new GroupServiceImpl();
 		String apartment = groupService.findByNo("1000");
 		assertEquals(apartment, "SS1部");
