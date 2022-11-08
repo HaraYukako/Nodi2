@@ -19,7 +19,7 @@ public class GroupServiceImplTest {
 		//shainRepositoryをモックにして、findByNoが機能するか？のテスト
 		when(groupRepository.selectByNo("10000")).thenReturn("SS1部");
 		GroupService groupService = new GroupServiceImpl();
-		String apartment = groupService.findByNo("10000");
+		String apartment = groupService.findByNo("1000");
 		assertEquals(apartment, "SS1部");
 	}
 
